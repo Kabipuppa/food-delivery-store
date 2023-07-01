@@ -1,0 +1,44 @@
+header{
+	background-color: #FC4F4F;
+}
+
+.card-img-box{
+	border-radius: 50%;
+}
+.content .list{
+	position: relative;
+	border-bottom: 1px solid #e5e7eb;
+}
+.close{
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.close:hover{
+	border-radius: 0;
+	background-color: #000;
+	color: #fff;
+}
+
+.footer.list{
+	border-bottom: none;
+}
+.active{
+	border-radius: 0 45px 45px 0;
+}
+.input{
+	border: 1px solid #e5e7eb;
+	border-bottom-left-radius: 45px;
+	border-top-left-radius: 45px;
+}
+span.red{
+	color: #FC4F4F;
+	text-decoration: line-through;
+}
+span.green{
+	color: green;
+}
+.promoCode .list{
+	border-bottom: 1px solid #e5e7eb;
+}

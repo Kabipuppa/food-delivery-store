@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>dostavka</title>
+		<!-- Подключаем Bootstrap -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		<!-- Подключаем CSS -->
+		<link rel="stylesheet" href="css/dostavka.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/basket.css">
+		<link rel="stylesheet" href="css/modal_style.css">
+</head>
+<body>
+	<div class="container">
+	  <div class="row">
+	    <div class="col-12 col-lg-8 h-100">
+	      	<div class="top list py-2 text-muted">
+				<div class="list-text py-1">Список адресов</div>
+			</div>
+			<div class="group-three d-flex">
+				<div class="home-adress py-4 px-2">
+					<div class="title">
+						<h2>Домашний адрес</h2>
+					</div>
+					<div class="subtitle mt-1 text-muted">
+						<span>ул. Комарова</span>,<span>д. 11</span>
+					</div>
+				</div>
+				<div class="ofice-adress active py-4 px-2">
+					<div class="title">
+						<h2>Рабочий адрес</h2>
+					</div>
+					<div class="subtitle mt-1 text-muted">
+						<span>ул. Щетинкина</span>,<span>д. 27</span>
+					</div>
+				</div>				
+				<div class="add-adress d-flex flex-column align-items-center justify-content-center py-4 px-2">
+					<span>Добавить адрес</span>
+				</div>
+			</div>
+			<div class="add-time d-flex py-4 align-items-start align-items-sm-center flex-column flex-sm-row">
+				<span class="mb-2 mb-sm-0">Время доставки:</span>
+				<!-- Ввпадающий список -->
+			<select class="py-1 px-1 ml-0 ml-sm-2" name="type" id="select_type">
+				<option value="none" hidden="">Выберите время</option>
+				<option value="1">Как можно скорее</option>
+				<option value="2">9:00</option>
+				<option value="3">10:00</option>
+			</select>
+			</div>
+			<div class="group-two d-flex flex-column flex-md-row">
+				<div class="top w-100 w-md-40 list text-muted">
+					<div class="list-text w3-col s4 pb-2">Способы оплаты</div>
+					<div class="cash-pay py-2 px-2">
+						<input type="radio" name="same" checked="checked"> Наличными курьеру
+					</div>
+					<div class="card-pay py-2 px-2 mt-2">
+						<input type="radio" name="same"> Банковской картой
+					</div>
+				</div>
+				<div class="bottom w-100 w-md-50 list text-muted ml-0 ml-md-3">
+					<div class="list-text w3-col s4 pb-2">Комментарий к заказу</div>
+					<textarea class="w-100 py-2 px-2" name="detail" id="detail" placeholder="Введите"></textarea>
+				</div>
+			</div>
+	    </div>
+
+	    <div class="col-12 col-lg-4 h-100">
+			<div class="top w-100 list py-2 text-muted">
+				<div class="list-text py-1">Итоговый заказ</div>
+			</div>
+			<div class="list d-flex flex-column align-items-start">
+					<div class="group-first d-flex align-items-center pb-4">
+                    	<span class="px-1 py-1">2x</span>
+						<div class="card-img-box px-4 py-4 mr-2" href="/products/1">
+							<div class="card-img-box-inside" id="style2"></div>
+						</div>
+						<div class="card-body">
+							<div class="card-title mb-1" href="/products/1"><h2>Суши Креветка</h2></div>
+							<div class="card-desc text-muted">
+									креветка тигровая, рис
+							</div>
+						</div>
+					</div>
+					<div class="group-first d-flex align-items-center pb-4">
+						<span class="px-1 py-1">1x</span>
+						<div class="card-img-box px-4 py-4 mr-2" href="/products/1">
+							<div class="card-img-box-inside" id="style2"></div>
+						</div>
+						<div class="card-body">
+							<div class="card-title mb-1" href="/products/1"><h2>Суши Креветка</h2></div>
+							<div class="card-desc text-muted">
+									креветка тигровая, рис
+							</div>
+						</div>
+					</div>
+					<div class="group-first d-flex align-items-center pb-4">
+						<span class="px-1 py-1">1x</span>
+						<div class="card-img-box px-4 py-4 mr-2" href="/products/1">
+							<div class="card-img-box-inside" id="style2"></div>
+						</div>
+						<div class="card-body">
+							<div class="card-title mb-1" href="/products/1"><h2>Суши Креветка</h2></div>
+							<div class="card-desc text-muted">
+									креветка тигровая, рис
+							</div>
+						</div>
+					</div>
+			</div>
+			<div class="wrapper-sum-promocode py-4">
+						<div class="d-flex justify-content-between pb-2">
+				            <span>Общая сумма:</span>
+				            <span class="red">897 ₽</span>
+						</div>
+						<div class="d-flex justify-content-between pb-2">
+				            <span>Применяемая скидка:</span>
+				            <span class="green pl-3">100 ₽</span>
+						</div>
+						<div class="d-flex justify-content-between">
+				            <span>Итогова сумма:</span>
+				            <span class="pl-3">797 ₽</span>
+						</div>
+			</div>
+			<button class="px-4 py-2" href="#">Оформить покупку</button>
+	    </div>
+	  </div>
+	</div>
+		<!--Модальное окно-->
+	<div class="vmodal hide">
+		<div class="modal-overlay">
+			<div class="modal-window col-8">
+				<div class="modal-header pt-4 px-2">
+					<span class="modal-title">Куда доставить?</span>
+					<span class="modal-close">&times;</span>
+				</div>
+				<div class="modal-body col-12 col-md-8 d-flex flex-column py-4">
+					<input class="py-2 px-2" type="text" id="" placeholder="Адрес">
+					<div class="d-flex py-3 flex-wrap align-items-baseline">
+						<input class="py-2 px-2 my-2" type="text" id="" placeholder="Квартира">
+						<div class="d-flex flex-column">
+							<input type="text" class="py-2 px-2" type="text" id="" placeholder="Подъезд">
+							<span class="py-2 px-2">Последний</span>
+						</div>
+						<div class="d-flex flex-column">
+							<input type="text" class="py-2 px-2" type="text" id="" placeholder="Код двери">
+							<span class="py-2 px-2">Домофон</span>
+						</div>
+						<div class="d-flex flex-column">
+							<input type="text" class="py-2 px-2" type="text" id="" placeholder="Этаж">
+							<span class="py-2 px-2">Последний</span>
+						</div>
+					</div>
+					<div>
+						<input class="d-flex flex-column py-2 px-2" type="text" id="" placeholder="Название адреса">
+						Например, <span>Дом</span> или <span>Работа</span>
+					</div>
+					<textarea class="h-50 py-2 px-2 my-4" name="detail" id="detail" placeholder="Комментарий к адресу"></textarea>
+				</div>
+				<div class="modal-footer pb-4 px-2">
+					<button class="px-4 py-2">Подтвердить адрес</button>
+				</div>
+			</div>
+		</div>
+	</div>
+		<!--Футер-->
+	<footer>
+	</footer>
+	<!-- Подключаем файл скриптов -->
+	<script src="js/modal-script.js"></script>
+</body>
+</html>

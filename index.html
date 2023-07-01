@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet">
+	<title>Food-restarant</title>
+	<!-- Подключаем Bootstrap -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<!-- Подключаем CSS -->
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/modal_style.css">
+</head>
+<body>
+	<!--Шапка-->
+	<header>
+		<div class="container">
+			<div class="row__header align-items-center d-flex justify-content-between py-2">
+				<div class="col-lg-2 col-md-2">
+					<a href="/"><img class="header__logo" src="https://pizzakoju.ee/wp-content/themes/WBST-master-new/dist/svg/logo-mobile.svg" alt=""></a>
+				</div>
+
+				<div class="menu-wrapper d-none d-md-flex flex-column flex-md-row col-10 align-items-left align-items-md-center justify-content-end font-weight-normal">
+					<nav class="menu d-flex flex-md-row
+					flex-column justify-content-sm-between">
+						<a class="px-3" href="#">Акции</a>
+						<a class="px-3" href="#">Доставка</a>
+						<a class="px-3" href="#">О нас</a>
+					</nav>
+
+					<div class="wrapper-item-links d-flex align-items-center py-3 px-3">
+						<span class="align-items-center d-flex">
+							<svg viewBox="0 0 24 24" role="presentation" style="width: 1.4rem; height: 1.4rem;"><path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" style="fill: currentcolor;">
+								<span class="pl-2">Владимир</span>
+							</path></svg>
+						</span>
+						<a class="button d-none d-md-block ml-4" href="#">
+							<svg viewBox="0 0 24 24" role="presentation" style="width: 1.4rem; height: 1.4rem;"><path d="M17,18C15.89,18 15,18.89 15,20A2,2 0 0,0 17,22A2,2 0 0,0 19,20C19,18.89 18.1,18 17,18M1,2V4H3L6.6,11.59L5.24,14.04C5.09,14.32 5,14.65 5,15A2,2 0 0,0 7,17H19V15H7.42A0.25,0.25 0 0,1 7.17,14.75C7.17,14.7 7.18,14.66 7.2,14.63L8.1,13H15.55C16.3,13 16.96,12.58 17.3,11.97L20.88,5.5C20.95,5.34 21,5.17 21,5A1,1 0 0,0 20,4H5.21L4.27,2M7,18C5.89,18 5,18.89 5,20A2,2 0 0,0 7,22A2,2 0 0,0 9,20C9,18.89 8.1,18 7,18Z" style="fill: currentcolor;">
+								
+								<div id="enscart_my_counter_wrapper"><span  id="easynetshop-cart-count"> 0 </span></div>
+
+							</path></svg>
+	                    </a>
+	                    <!-- Всплывающее окно-->
+	                    <div class="window d-none d-md-block px-3 py-3">
+	                    	<div class="d-flex justify-content-between pb-3">
+	                    		<div class="left d-flex align-items-center">
+	                    			<div class="card-img-box px-4 py-4 mr-2" href="/products/1">
+										<div class="card-img-box-inside" id="style4"></div>
+									</div>
+									<div>
+										<span>Жаркий сезон</span>
+		                    			<div class="add d-flex align-items-center justify-content-between">
+											<div class="ml-1">-</div>
+											<span>1</span>
+											<div class="mr-1">+</div>
+										</div>
+									</div>
+	                    		</div>
+	                    		<div class="right d-flex align-items-end flex-column justify-content-between">
+	                    			<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+									    <path fill="currentColor" d="M19,4H15.5L14.5,3H9.5L8.5,4H5V6H19M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19Z" />
+									</svg>
+									<span>299 ₽</span>
+	                    		</div>
+	                    	</div>
+	                    	<div class="d-flex justify-content-between pb-3 pt-3">
+	                    		<div class="left d-flex align-items-center">
+	                    			<div class="card-img-box px-4 py-4 mr-2" href="/products/1">
+										<div class="card-img-box-inside" id="style2"></div>
+									</div>
+									<div>
+										<span>Суши Креветка</span>
+		                    			<div class="add d-flex align-items-center justify-content-between">
+											<div class="ml-1">-</div>
+											<span>1</span>
+											<div class="mr-1">+</div>
+										</div>
+									</div>
+	                    		</div>
+	                    		<div class="right d-flex align-items-end flex-column justify-content-between">
+	                    			<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+									    <path fill="currentColor" d="M19,4H15.5L14.5,3H9.5L8.5,4H5V6H19M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19Z" />
+									</svg>
+									<span>299 ₽</span>
+	                    		</div>
+	                    	</div>
+	                    	<div class="d-flex justify-content-between pb-3 pt-3">
+	                    		<div class="left d-flex align-items-center">
+	                    			<div class="card-img-box px-4 py-4 mr-2" href="/products/1">
+										<div class="card-img-box-inside" id="style3"></div>
+									</div>
+									<div>
+										<span>Ролл Окитори</span>
+		                    			<div class="add d-flex align-items-center justify-content-between">
+											<div class="ml-1">-</div>
+											<span>1</span>
+											<div class="mr-1">+</div>
+										</div>
+									</div>
+	                    		</div>
+	                    		<div class="right d-flex align-items-end flex-column justify-content-between">
+	                    			<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+									    <path fill="currentColor" d="M19,4H15.5L14.5,3H9.5L8.5,4H5V6H19M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19Z" />
+									</svg>
+									<span>299 ₽</span>
+	                    		</div>
+	                    	</div>
+	                    	<div class="summa d-flex align-items-center justify-content-between border-0 pt-3">
+	                    		<span>Сумма заказа</span>
+	                    		<span>897 ₽</span>
+	                    	</div>
+	                    </div>
+					</div>
+				</div>
+				<!--Бургер-иконка-->
+				<div class="burger-icon-wrapper d-flex d-md-none">
+					<div class="burger-icon">
+					</div>
+		    	</div>
+			</div>
+		</div>
+	</header>
+	<!--Меню-->
+	<nav class="d-flex">
+		<div class="container">
+			<div class="wrapper-line py-2 d-flex flex-nowrap overflow-auto">
+				<li><a class="active d-inline-block inline-block  px-3 py-1" href="/#1"><font style="vertical-align: inherit;">ВОК</font></a></li>
+				<li><a class="d-inline-block inline-block  px-3 py-1" href="/#2"><font style="vertical-align: inherit;">Суши</font></a></li>
+				<li><a class="d-inline-block inline-block  px-3 py-1" href="/#3"><font style="vertical-align: inherit;">Роллы</font></a></li>
+				<li><a class="d-inline-block inline-block  px-3 py-1" href="/#4"><font style="vertical-align: inherit;">Комбо</font></a></li>
+				<li><a class="d-inline-block inline-block  px-3 py-1" href="/#5"><font style="vertical-align: inherit;">Закуски</font></a></li>
+				<li><a class="d-inline-block inline-block  px-3 py-1" href="/#6"><font style="vertical-align: inherit;">Десерты</font></a></li>
+				<li><a class="d-inline-block inline-block  px-3 py-1" href="/#7"><font style="vertical-align: inherit;">Напитки</font></a></li>
+			</div>
+		</div>
+	</nav>
+	<!--Слайдер-->
+	<section class="slider-text">Тут будет слайдер!</section>
+	<!--Карточки товаров-->
+	<div class="container">
+		<!--Первая категория ВОКИ-->
+		<div class="category" id="1">
+			<h2 class="main-text font-weight-bold">ВОК</h2>
+			<div class="wrapper d-flex flex-wrap overflow-hidden">
+
+				<!--Обычная кнопка "В корзину"-->
+				<div class="card-wrapper">
+					<div class="card card-desk">
+						<a class="card-img-box" href="/products/1">
+							<div class="card-img-box-inside" id="style1">
+								<img src="icon/promo1" alt="">
+							</div>
+						</a>
+						<div class="card-body">
+							<div class="card-title" href="/products/1"><h2>Лапша яичная с курицей и креветкой под соусом терияки</h2></div>
+							<div class="card-body-text mt-1 text-muted">
+								<span>300 г.</span> | 
+								<span>335 ккал.</span>
+							</div>
+							<div class="card-desc">
+								Курица, креветка, овощи, лапша яичная, соус терияки, кунжут, чесночно-имбирный микс.
+							</div>
+						</div>
+						<div class="card-footer mt-4 d-flex align-items-center justify-content-between">
+							<div class="price font-weight-bold">299 ₽</div>
+							<button class="px-4 py-2" href="#">В корзину</button>
+						</div>
+					</div>
+				</div>
+				<!--Обычная кнопка cо старой ценой-->
+				<div class="card-wrapper">
+					<div class="card card-desk">
+						<a class="card-img-box" href="/products/2">
+							<div class="card-img-box-inside" id="style1"></div>
+						</a>
+						<div class="card-body">
+							<div class="card-title" href="/products/2"><h2>Лапша яичная с курицей и креветкой под соусом терияки</h2></div>
+							<div class="card-body-text mt-1 text-muted">
+								<span >300 г.</span> | 
+								<span>335 ккал.</span>
+							</div>
+							<div class="card-desc">
+								Курица, креветка, овощи, лапша яичная, соус терияки, кунжут, чесночно-имбирный микс.
+							</div>
+						</div>
+						<div class="card-footer mt-4 d-flex align-items-center justify-content-between">
+							<div class="price font-weight-bold d-flex flex-column justify-content-center">
+								<span class="">299 ₽</span>
+								<span class="through">399 ₽</span>
+							</div>
+							<button class="px-4 py-2" href="#">В корзину</button>
+						</div>
+					</div>
+				</div>
+				<!--Кнопка с добавленным в корзину товаром-->
+				<div class="card-wrapper">
+					<div class="card card-desk">
+						<a class="card-img-box" href="/products/3">
+							<div class="card-img-box-inside" id="style1"></div>
+						</a>
+						<div class="card-body">
+							<div class="card-title" href="/products/3"><h2>Лапша яичная с курицей и креветкой под соусом терияки</h2></div>
+							<div class="card-body-text mt-1 text-muted">
+								<span >300 г.</span> | 
+								<span>335 ккал.</span>
+							</div>
+							<div class="card-desc">
+								Курица, креветка, овощи, лапша яичная, соус терияки, кунжут, чесночно-имбирный микс.
+							</div>
+						</div>
+						<div class="card-footer mt-4 d-flex align-items-center justify-content-between">
+							<div class="price font-weight-bold">299 ₽</div>
+							<div class="add d-flex align-items-center justify-content-between">
+								<div class="ml-1">-</div>
+								<span>3</span>
+								<div class="mr-1">+</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--Кнопка с добавленным в корзину товаром и со старой ценой-->
+				<div class="card-wrapper">
+					<div class="card card-desk">
+						<a class="card-img-box" href="/products/4">
+							<div class="card-img-box-inside" id="style1"></div>
+						</a>
+						<div class="card-body">
+							<div class="card-title" href="/products/4"><h2>Лапша яичная с курицей и креветкой под соусом терияки</h2></div>
+							<div class="card-body-text mt-1 text-muted">
+								<span >300 г.</span> | 
+								<span>335 ккал.</span>
+							</div>
+							<div class="card-desc">
+								Курица, креветка, овощи, лапша яичная, соус терияки, кунжут, чесночно-имбирный микс.
+							</div>
+						</div>
+						<div class="card-footer mt-4 d-flex align-items-center justify-content-between">
+							<div class="price font-weight-bold d-flex flex-column justify-content-center">
+								<span class="">299 ₽</span>
+								<span class="through">399 ₽</span>
+							</div>
+							<div class="add d-flex align-items-center justify-content-between">
+								<div class="ml-1">-</div>
+								<span>3</span>
+								<div class="mr-1">+</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<!--Вторая категория Суши-->
+		<div class="category" id="2">
+			<h2 class="main-text font-weight-bold">Суши</h2>
+			<div class="wrapper d-flex flex-wrap overflow-hidden">
+
+				<!--Обычная кнопка "В корзину"-->
+				<div class="card-wrapper">
+					<div class="card card-desk">
+						<a class="card-img-box" href="/products/1">
+							<div class="card-img-box-inside" id="style2"></div>
+						</a>
+						<div class="card-body">
+							<div class="card-title" href="/products/1"><h2>Суши Креветка</h2></div>
+							<div class="card-body-text mt-1 text-muted">
+								<span >32 г.</span> | 
+								<span>48 ккал.</span>
+							</div>
+							<div class="card-desc">
+								креветка тигровая, рис
+							</div>
+						</div>
+						<div class="card-footer mt-4 d-flex align-items-center justify-content-between">
+							<div class="price font-weight-bold">299 ₽</div>
+							<button class="px-4 py-2" href="#">В корзину</button>
+						</div>
+					</div>
+				</div>
+				<!--Обычная кнопка cо старой ценой-->
+				<div class="card-wrapper">
+					<div class="card card-desk">
+						<a class="card-img-box" href="/products/2">
+							<div class="card-img-box-inside" id="style2"></div>
+						</a>
+						<div class="card-body">
+							<div class="card-title" href="/products/2"><h2>Суши Чука</h2></div>
+							<div class="card-body-text mt-1 text-muted">
+								<span >30 г.</span> | 
+								<span>48 ккал.</span>
+							</div>
+							<div class="card-desc">
+								водоросли чука, нори, рис
+							</div>							
+						</div>
+						<div class="card-footer mt-4 d-flex align-items-center justify-content-between">
+							<div class="price font-weight-bold d-flex flex-column justify-content-center">
+								<span class="">299 ₽</span>
+								<span class="through">399 ₽</span>
+							</div>
+							<button class="px-4 py-2" href="#">В корзину</button>
+						</div>
+					</div>
+				</div>
+				<!--Кнопка с добавленным в корзину товаром-->
+				<div class="card-wrapper">
+					<div class="card card-desk">
+						<a class="card-img-box" href="/products/3">
+							<div class="card-img-box-inside" id="style2"></div>
+						</a>
+						<div class="card-body">
+							<div class="card-title" href="/products/3"><h2>Суши Угорь</h2></div>
+							<div class="card-body-text mt-1 text-muted">
+								<span >33 г.</span> | 
+								<span>48 ккал.</span>
+							</div>
+							<div class="card-desc">
+								угорь, кунжут, унаги соус
+							</div>
+						</div>
+						<div class="card-footer mt-4 d-flex align-items-center justify-content-between">
+							<div class="price font-weight-bold">299 ₽</div>
+							<div class="add d-flex align-items-center justify-content-between">
+								<div class="ml-1">-</div>
+								<span>3</span>
+								<div class="mr-1">+</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--Кнопка с добавленным в корзину товаром и со старой ценой-->
+				<div class="card-wrapper">
+					<div class="card card-desk">
+						<a class="card-img-box" href="/products/4">
+							<div class="card-img-box-inside" id="style2"></div>
+						</a>
+						<div class="card-body">
+							<div class="card-title" href="/products/4"><h2>Суши Лосось</h2></div>
+							<div class="card-body-text mt-1 text-muted">
+								<span >32 г.</span> | 
+								<span>48 ккал.</span>
+							</div>
+							<div class="card-desc">
+								лосось, рис
+							</div>
+						</div>
+						<div class="card-footer mt-4 d-flex align-items-center justify-content-between">
+							<div class="price font-weight-bold d-flex flex-column justify-content-center">
+								<span class="">299 ₽</span>
+								<span class="through">399 ₽</span>
+							</div>
+							<div class="add d-flex align-items-center justify-content-between">
+								<div class="ml-1">-</div>
+								<span>3</span>
+								<div class="mr-1">+</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<!--Третья категория Роллы-->
+		<div class="category" id="3">
+			<h2 class="main-text font-weight-bold">Роллы</h2>
+			<div class="wrapper d-flex flex-wrap overflow-hidden">
+
+				<!--Обычная кнопка "В корзину"-->
+				<div class="card-wrapper">
+					<div class="card card-desk">
+						<a class="card-img-box" href="/products/1">
+							<div class="card-img-box-inside" id="style3"></div>
+						</a>
+						<div class="card-body">
+							<div class="card-title" href="/products/1"><h2>Ролл Окитори</h2></div>
+							<div class="card-body-text mt-1 text-muted">
+								<span >243 г.</span> | 
+								<span>215 ккал.</span>
+							</div>
+							<div class="card-desc">
+								лосось, цыпленок, омлет тамаго, масаго, шеф-соус, спайси соус, кунжут
+							</div>
+						</div>
+						<div class="card-footer mt-4 d-flex align-items-center justify-content-between">
+							<div class="price font-weight-bold">299 ₽</div>
+							<button class="px-4 py-2" href="#">В корзину</button>
+						</div>
+					</div>
+				</div>
+				<!--Обычная кнопка cо старой ценой-->
+				<div class="card-wrapper">
+					<div class="card card-desk">
+						<a class="card-img-box" href="/products/2">
+							<div class="card-img-box-inside" id="style3"></div>
+						</a>
+						<div class="card-body">
+							<div class="card-title" href="/products/2"><h2>Ролл Эби Рору</h2></div>
+							<div class="card-body-text mt-1 text-muted">
+								<span >252 г.</span> | 
+								<span>194 ккал.</span>
+							</div>
+							<div class="card-desc">
+								креветка тигровая, краб-крем, огурец, перец болгарский, салат айсберг, масаго, медовый соус
+							</div>
+						</div>
+						<div class="card-footer mt-4 d-flex align-items-center justify-content-between">
+							<div class="price font-weight-bold d-flex flex-column justify-content-center">
+								<span class="">299 ₽</span>
+								<span class="through">399 ₽</span>
+							</div>
+							<button class="px-4 py-2" href="#">В корзину</button>
+						</div>
+					</div>
+				</div>
+				<!--Кнопка с добавленным в корзину товаром-->
+				<div class="card-wrapper">
+					<div class="card card-desk">
+						<a class="card-img-box" href="/products/3">
+							<div class="card-img-box-inside" id="style3"></div>
+						</a>
+						<div class="card-body">
+							<div class="card-title" href="/products/3"><h2>Ролл Дабл унаги</h2></div>
+							<div class="card-body-text mt-1 text-muted">
+								<span >234 г.</span> | 
+								<span>254 ккал.</span>
+							</div>
+							<div class="card-desc">
+								угорь, цыпленок, краб-крем, сливочный сыр, омлет тамаго, апельсиновый соус, спайси соус, паприка, кунжут
+							</div>
+						</div>
+						<div class="card-footer mt-4 d-flex align-items-center justify-content-between">
+							<div class="price font-weight-bold">299 ₽</div>
+							<div class="add d-flex align-items-center justify-content-between">
+								<div class="ml-1">-</div>
+								<span>3</span>
+								<div class="mr-1">+</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--Кнопка с добавленным в корзину товаром и со старой ценой-->
+				<div class="card-wrapper">
+					<div class="card card-desk">
+						<a class="card-img-box" href="/products/4">
+							<div class="card-img-box-inside" id="style3"></div>
+						</a>
+						<div class="card-body">
+							<div class="card-title" href="/products/4"><h2>Ролл Мидори</h2></div>
+							<div class="card-body-text mt-1 text-muted">
+								<span >237 г.</span> | 
+								<span>124 ккал.</span>
+							</div>
+							<div class="card-desc">
+								креветка тигровая, краб-крем, чука, масаго, яки соус, спайси соус, медовый соус
+							</div>
+						</div>
+						<div class="card-footer mt-4 d-flex align-items-center justify-content-between">
+							<div class="price font-weight-bold d-flex flex-column justify-content-center">
+								<span class="">299 ₽</span>
+								<span class="through">399 ₽</span>
+							</div>
+							<div class="add d-flex align-items-center justify-content-between">
+								<div class="ml-1">-</div>
+								<span>3</span>
+								<div class="mr-1">+</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<!--Четвертая категория Комбо-->
+		<div class="category" id="4">
+			<h2 class="main-text font-weight-bold">Комбо</h2>
+			<div class="wrapper d-flex flex-wrap overflow-hidden">
+
+				<!--Обычная кнопка "В корзину"-->
+				<div class="card-wrapper">
+					<div class="card card-desk">
+						<a class="card-img-box" href="/products/1">
+							<div class="card-img-box-inside" id="style4"></div>
+						</a>
+						<div class="card-body">
+							<div class="card-title" href="/products/1"><h2>Жаркий сезон</h2></div>
+							<div class="card-body-text mt-1 text-muted">
+								<span >1056 г.</span> | 
+								<span>1100 ккал.</span>
+							</div>
+							<div class="card-desc">
+								запеч. ролл Аяши, запеч. ролл Румяный, запеч. ролл Сырный, запеч. ролл Лососик Хот с терияки , запеч. ролл Шиитаке, запеч. ролл Крабик Хот
+							</div>
+						</div>
+						<div class="card-footer mt-4 d-flex align-items-center justify-content-between">
+							<div class="price font-weight-bold">299 ₽</div>
+							<button class="px-4 py-2" href="#">В корзину</button>
+						</div>
+					</div>
+				</div>
+				<!--Обычная кнопка cо старой ценой-->
+				<div class="card-wrapper">
+					<div class="card card-desk">
+						<a class="card-img-box" href="/products/2">
+							<div class="card-img-box-inside" id="style4"></div>
+						</a>
+						<div class="card-body">
+							<div class="card-title" href="/products/2"><h2>Комбо Роллентинка</h2></div>
+							<div class="card-body-text mt-1 text-muted">
+								<span >1395 г.</span> | 
+								<span>2897 ккал.</span>
+							</div>
+							<div class="card-desc">
+								Сет Любимка + Фруктовый ротти
+							</div>
+						</div>
+						<div class="card-footer mt-4 d-flex align-items-center justify-content-between">
+							<div class="price font-weight-bold d-flex flex-column justify-content-center">
+								<span class="">299 ₽</span>
+								<span class="through">399 ₽</span>
+							</div>
+							<button class="px-4 py-2" href="#">В корзину</button>
+						</div>
+					</div>
+				</div>
+				<!--Кнопка с добавленным в корзину товаром-->
+				<div class="card-wrapper">
+					<div class="card card-desk">
+						<a class="card-img-box" href="/products/3">
+							<div class="card-img-box-inside" id="style4"></div>
+						</a>
+						<div class="card-body">
+							<div class="card-title" href="/products/3"><h2>Сет Дайкири</h2></div>
+							<div class="card-body-text mt-1 text-muted">
+								<span >1100 г.</span> | 
+								<span>2284 ккал.</span>
+							</div>
+							<div class="card-desc">
+								Филадельфия лайт сяке 8шт, Банзай 8шт, Бекфри темпура 8шт, Калифорния каппа маки с икрой 8шт, Мистер Крабс 8шт, Соевый соус 40г - 3шт, Имбирь - 40г, Васаби - 20г Вес: 1100г 40шт
+							</div>
+						</div>
+						<div class="card-footer mt-4 d-flex align-items-center justify-content-between">
+							<div class="price font-weight-bold">299 ₽</div>
+							<div class="add d-flex align-items-center justify-content-between">
+								<div class="ml-1">-</div>
+								<span>3</span>
+								<div class="mr-1">+</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--Кнопка с добавленным в корзину товаром и со старой ценой-->
+				<div class="card-wrapper">
+					<div class="card card-desk">
+						<a class="card-img-box" href="/products/4">
+							<div class="card-img-box-inside" id="style4"></div>
+						</a>
+						<div class="card-body">
+							<div class="card-title" href="/products/4"><h2>Сет Все будет хорошо</h2></div>
+							<div class="card-body-text mt-1 text-muted">
+								<span >2225 г.</span> | 
+								<span>4421 ккал.</span>
+							</div>
+							<div class="card-desc">
+								Филадельфия лайт сяке 8шт, Калифорния каппа маки с икрой 8шт, Лава с лососем 8шт, Сакура темпура 8шт, Оливье темпура 8шт, Банзай 8шт, Лава с крабом 8шт
+							</div>
+						</div>
+						<div class="card-footer mt-4 d-flex align-items-center justify-content-between">
+							<div class="price font-weight-bold d-flex flex-column justify-content-center">
+								<span class="">299 ₽</span>
+								<span class="through">399 ₽</span>
+							</div>
+							<div class="add d-flex align-items-center justify-content-between">
+								<div class="ml-1">-</div>
+								<span>3</span>
+								<div class="mr-1">+</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<!--Пятая категория Закуски-->
+		<div class="category" id="5">
+			<h2 class="main-text font-weight-bold">Закуски</h2>
+			<div class="wrapper d-flex flex-wrap overflow-hidden">
+
+				<!--Обычная кнопка "В корзину"-->
+				<div class="card-wrapper">
+					<div class="card card-desk">
+						<a class="card-img-box" href="/products/1">
+							<div class="card-img-box-inside" id="style5"></div>
+						</a>
+						<div class="card-body">
+							<div class="card-title" href="/products/1"><h2>Куриные палочки</h2></div>
+							<div class="card-body-text mt-1 text-muted">
+								<span >135 г.</span> | 
+								<span>240 ккал.</span>
+							</div>
+							<div class="card-desc">
+								Курица, кляр, сухари панко, соус Ореховый.
+							</div>
+						</div>
+						<div class="card-footer mt-4 d-flex align-items-center justify-content-between">
+							<div class="price font-weight-bold">299 ₽</div>
+							<button class="px-4 py-2" href="#">В корзину</button>
+						</div>
+					</div>
+				</div>
+				<!--Кнопка с добавленным в корзину товаром и со старой ценой-->
+				<div class="card-wrapper">
+					<div class="card card-desk">
+						<a class="card-img-box" href="/products/4">
+							<div class="card-img-box-inside" id="style5"></div>
+						</a>
+						<div class="card-body">
+							<div class="card-title" href="/products/4"><h2>Рисовые шарики с курицей</h2></div>
+							<div class="card-body-text mt-1 text-muted">
+								<span >270 г.</span> | 
+								<span>505 ккал.</span>
+							</div>
+							<div class="card-desc">
+								Рис, сыр сливочный, курица терияки, кляр, панко.
+							</div>
+						</div>
+						<div class="card-footer mt-4 d-flex align-items-center justify-content-between">
+							<div class="price font-weight-bold d-flex flex-column justify-content-center">
+								<span class="">299 ₽</span>
+								<span class="through">399 ₽</span>
+							</div>
+							<div class="add d-flex align-items-center justify-content-between">
+								<div class="ml-1">-</div>
+								<span>3</span>
+								<div class="mr-1">+</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<!--Шестая категория Десерты-->
+		<div class="category" id="6">
+			<h2 class="main-text font-weight-bold">Десерты</h2>
+			<div class="wrapper d-flex flex-wrap overflow-hidden">
+
+				<!--Обычная кнопка "В корзину"-->
+				<div class="card-wrapper">
+					<div class="card card-desk">
+						<a class="card-img-box" href="/products/1">
+							<div class="card-img-box-inside" id="style6"></div>
+						</a>
+						<div class="card-body">
+							<div class="card-title" href="/products/1"><h2>Чизкейк ванильный</h2></div>
+							<div class="card-body-text mt-1 text-muted">
+								<span >125 г.</span> | 
+								<span>320 ккал.</span>
+							</div>
+							<div class="card-desc">
+								ванильный
+							</div>
+						</div>
+						<div class="card-footer mt-4 d-flex align-items-center justify-content-between">
+							<div class="price font-weight-bold">299 ₽</div>
+							<button class="px-4 py-2" href="#">В корзину</button>
+						</div>
+					</div>
+				</div>
+				<!--Обычная кнопка cо старой ценой-->
+				<div class="card-wrapper">
+					<div class="card card-desk">
+						<a class="card-img-box" href="/products/2">
+							<div class="card-img-box-inside" id="style6"></div>
+						</a>
+						<div class="card-body">
+							<div class="card-title" href="/products/2"><h2>Чизкейк клубничный</h2></div>
+							<div class="card-body-text mt-1 text-muted">
+								<span >125 г.</span> | 
+								<span>293 ккал.</span>
+							</div>
+							<div class="card-desc">
+								клубничный
+							</div>
+						</div>
+						<div class="card-footer mt-4 d-flex align-items-center justify-content-between">
+							<div class="price font-weight-bold d-flex flex-column justify-content-center">
+								<span class="">299 ₽</span>
+								<span class="through">399 ₽</span>
+							</div>
+							<button class="px-4 py-2" href="#">В корзину</button>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<!--Седьмая категория Напитки-->
+		<div class="category" id="7">
+			<h2 class="main-text font-weight-bold">Напитки</h2>
+			<div class="wrapper d-flex flex-wrap overflow-hidden">
+
+				<!--Обычная кнопка cо старой ценой-->
+				<div class="card-wrapper">
+					<div class="card card-desk">
+						<a class="card-img-box" href="/products/2">
+							<div class="card-img-box-inside" id="style7"></div>
+						</a>
+						<div class="card-body">
+							<div class="card-title" href="/products/2"><h2>Кока-кола ZERO</h2></div>
+							<div class="card-body-text mt-1 text-muted">
+								<span >0.5 л.</span> | 
+								<span>245 ккал.</span>
+							</div>
+							<div class="card-desc">
+								Сахар
+							</div>
+						</div>
+						<div class="card-footer mt-4 d-flex align-items-center justify-content-between">
+							<div class="price font-weight-bold d-flex flex-column justify-content-center">
+								<span class="">299 ₽</span>
+								<span class="through">399 ₽</span>
+							</div>
+							<button class="px-4 py-2" href="#">В корзину</button>
+						</div>
+					</div>
+				</div>
+				<!--Кнопка с добавленным в корзину товаром-->
+				<div class="card-wrapper">
+					<div class="card card-desk">
+						<a class="card-img-box" href="/products/3">
+							<div class="card-img-box-inside" id="style7"></div>
+						</a>
+						<div class="card-body">
+							<div class="card-title" href="/products/3"><h2>Морс клюквенный</h2></div>
+							<div class="card-body-text mt-1 text-muted">
+								<span >0.5 л.</span> | 
+								<span>500 ккал.</span>
+							</div>
+							<div class="card-desc">
+								Клюква, сахар, вода.
+							</div>
+						</div>
+						<div class="card-footer mt-4 d-flex align-items-center justify-content-between">
+							<div class="price font-weight-bold">299 ₽</div>
+							<div class="add d-flex align-items-center justify-content-between">
+								<div class="ml-1">-</div>
+								<span>3</span>
+								<div class="mr-1">+</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<!--Модальное окно-->
+	<div class="vmodal hide">
+		<div class="modal-overlay">
+			<div class="modal-window col-8">
+				<div class="modal-header">
+					<span class="modal-title">Карточка товара</span>
+					<span class="modal-close">&times;</span>
+				</div>
+				<div class="modal-body d-flex flex-column flex-md-row">
+					<div class="wrapper-modal-img col-12 col-md-6">
+						<div class="modal-img card-img-box-inside" id="style1"></div>
+					</div>
+					<div class="modal-text col-12 col-md-6">
+						<div class="card-body">
+							<div class="card-title" href="/products/1"><h2>Лапша яичная с курицей и креветкой под соусом терияки</h2></div>
+							<div class="card-body-text mt-1 text-muted">
+								<span>300 г.</span> | 
+								<span>335 ккал.</span>
+							</div>
+							<div class="card-desc">
+								Курица, креветка, овощи, лапша яичная, соус терияки, кунжут, чесночно-имбирный микс.
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button class="px-4 py-2">В корзину</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--Футер-->
+	<footer>
+	</footer>
+	<!-- Подключаем файл скриптов -->
+	<script src="js/script.js"></script>
+	<script src="js/modal-script.js"></script>
+</body>
+</html>

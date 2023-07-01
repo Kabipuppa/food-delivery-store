@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>basket</title>
+		<!-- Подключаем Bootstrap -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		<!-- Подключаем CSS -->
+		<link rel="stylesheet" href="css/basket.css">
+		<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<header>
+		<div class="container">
+			<div class="row__header align-items-left d-flex py-2">
+				<div class="wrapper-item-links d-flex align-items-center py-3 px-3">
+					<a class="button" href="#">
+						<svg viewBox="0 0 24 24" role="presentation" style="width: 1.4rem; height: 1.4rem;">
+							<path d="M17,18C15.89,18 15,18.89 15,20A2,2 0 0,0 17,22A2,2 0 0,0 19,20C19,18.89 18.1,18 17,18M1,2V4H3L6.6,11.59L5.24,14.04C5.09,14.32 5,14.65 5,15A2,2 0 0,0 7,17H19V15H7.42A0.25,0.25 0 0,1 7.17,14.75C7.17,14.7 7.18,14.66 7.2,14.63L8.1,13H15.55C16.3,13 16.96,12.58 17.3,11.97L20.88,5.5C20.95,5.34 21,5.17 21,5A1,1 0 0,0 20,4H5.21L4.27,2M7,18C5.89,18 5,18.89 5,20A2,2 0 0,0 7,22A2,2 0 0,0 9,20C9,18.89 8.1,18 7,18Z" style="fill: currentcolor;">
+							</path>
+						</svg>			
+	                </a>
+				</div>
+				<div class="cart-modal-title py-3 px-3">Корзина</div>
+			</div>
+		</div>
+	</header>
+	<div class="wrapper-content">
+		<div class="container d-flex flex-column flex-lg-row">
+			<div class="content col-12 col-md-12 col-lg-8 px-0">
+				<div class="top list d-none d-md-flex py-2 text-muted justify-content-between">
+					<div class="list-text py-1">Продукт</div>
+					<div class="col-md-5 col-lg-4 d-flex justify-content-between px-0">
+						<div class="list-text px-3 py-1">Количество</div>
+						<div class="list-text px-3 py-1">Цена</div>
+					</div>
+				</div>
+
+				<div class="list d-flex flex-column flex-md-row align-items-start align-items-md-center justify-content-between py-4">
+					<button type="button" class="close px-1 py-1">
+                    	<span aria-hidden="true">×</span>
+                	</button>
+					<div class="group-first d-flex align-items-center">
+						<div class="card-img-box px-4 py-4 mr-2" href="/products/1">
+							<div class="card-img-box-inside" id="style2"></div>
+						</div>
+						<div class="card-body">
+							<div class="card-title" href="/products/1"><h2>Суши Креветка</h2></div>
+							<div class="card-body-text mt-1 text-muted">
+								<span>32 г.</span> | 
+								<span>48 ккал.</span>
+							</div>
+							<div class="card-desc">
+									креветка тигровая, рис
+							</div>
+						</div>
+					</div>
+					<div class="col-group-second col-md-5 col-lg-5 d-flex align-items-center justify-content-between pt-3 pt-md-0 px-0">
+						<div class="add d-flex align-items-center justify-content-between">
+							<div class="ml-1">-</div>
+							<span>1</span>
+							<div class="mr-1">+</div>
+						</div>
+						<div class="price font-weight-bold">299 ₽</div>
+					</div>
+				</div>
+
+				<div class="list d-flex flex-column flex-md-row align-items-start align-items-md-center justify-content-between py-4">
+					<button type="button" class="close px-1 py-1">
+                    	<span aria-hidden="true">×</span>
+                	</button>
+					<div class="group-first d-flex align-items-center">
+						<div class="card-img-box px-4 py-4 mr-2" href="/products/1">
+							<div class="card-img-box-inside" id="style7"></div>
+						</div>
+						<div class="card-body">
+							<div class="card-title" href="/products/1"><h2>Кока-кола ZERO</h2></div>
+							<div class="card-body-text mt-1 text-muted">
+								<span>0.5 л.</span> | 
+								<span>245 ккал.</span>
+							</div>
+							<div class="card-desc">
+									сахар
+							</div>
+						</div>
+					</div>
+					<div class="col-group-second col-md-5 col-lg-5 d-flex align-items-center justify-content-between pt-3 pt-md-0 px-0">
+						<div class="add d-flex align-items-center justify-content-between">
+							<div class="ml-1">-</div>
+							<span>1</span>
+							<div class="mr-1">+</div>
+						</div>
+						<div class="price font-weight-bold">299 ₽</div>
+					</div>
+				</div>
+
+				<div class="list d-flex flex-column flex-md-row align-items-start align-items-md-center justify-content-between py-4">
+					<button type="button" class="close px-1 py-1">
+                    	<span aria-hidden="true">×</span>
+                	</button>
+					<div class="group-first d-flex align-items-center">
+						<div class="card-img-box px-4 py-4 mr-2" href="/products/1">
+							<div class="card-img-box-inside" id="style6"></div>
+						</div>
+						<div class="card-body">
+							<div class="card-title" href="/products/1"><h2>Чизкейк ванильный</h2></div>
+							<div class="card-body-text mt-1 text-muted">
+								<span>125 г.</span> | 
+								<span>320 ккал.</span>
+							</div>
+							<div class="card-desc">
+									ваниль
+							</div>
+						</div>
+					</div>
+					<div class="col-group-second col-md-5 col-lg-5 d-flex align-items-center justify-content-between pt-3 pt-md-0 px-0">
+						<div class="add d-flex align-items-center justify-content-between">
+							<div class="ml-1">-</div>
+							<span>1</span>
+							<div class="mr-1">+</div>
+						</div>
+						<div class="price font-weight-bold">299 ₽</div>
+					</div>
+				</div>
+
+				<div class="footer list d-flex flex-column flex-md-row align-items-start align-items-md-center justify-content-between py-3">
+					<div class="summa d-flex align-items-center justify-content-between border-0 py-3 px-0 px-md-3">
+		                <span>Сумма заказа</span>
+		                <span class="pl-3">897 ₽</span>
+		            </div>
+					<button class="px-4 py-2" href="#">Оформить заказ</button>
+				</div>
+			</div>
+			<div class="promoCode col-12 col-md-12 col-lg-4 d-flex flex-column pr-0 pl-0 pl-md-3 d-flex  align-items-start">
+				<div class="top w-100 list py-2 text-muted">
+					<div class="list-text py-1">Промокод</div>
+				</div>
+				<div>
+					<div class="list d-flex py-4">
+						<input type="text" class="input w-50 px-4 py-2" id="name" placeholder="Ввод">
+						<button class="active w-50 px-4 py-2" href="#">Ок</button>
+					</div>
+					<div class="wrapper-sum-promocode py-4">
+						<div class="d-flex justify-content-between pb-2">
+				            <span>Общая сумма:</span>
+				            <span class="red">897 ₽</span>
+						</div>
+						<div class="d-flex justify-content-between">
+				            <span>Применяемая скидка:</span>
+				            <span class="green pl-3">100 ₽</span>
+						</div>
+					</div>	
+				</div>
+				<button class="px-4 py-2" href="#">Оформить заказ</button>					
+			</div>
+		</div>
+	</div>
+</body>
+</html>
